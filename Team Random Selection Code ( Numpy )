@@ -1,0 +1,15 @@
+Team Random Selection Code
+import numpy as np
+
+level1_list = [1, 2, 3, 4]
+level2_list = ['a', 'b', 'c','d']
+level3_list = [99, 88, 77,66]
+level4_list = ["1$","2&","3%","4©"]
+
+combined_array = np.array([level1_list, level2_list, level3_list, level4_list])
+
+for row in combined_array:
+    np.random.shuffle(row)
+
+for i, new_list in enumerate(combined_array.T):
+    print(f"Team{i+1} = {new_list}")
